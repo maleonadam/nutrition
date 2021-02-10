@@ -31,7 +31,7 @@ class CreateOrdersTable extends Migration
             $table->text('message')->nullable();
             
             $table->integer('order_status_id')->default('1');
-            $table->integer('accept_order')->default('1');
+            $table->integer('accept_order')->default('0');
             $table->string('reject_reason')->nullable();
             $table->string('budget')->nullable();
             $table->string('invoice')->nullable();

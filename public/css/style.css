@@ -20,7 +20,6 @@
 
 -----------------------------------------------------------------------------------*/
 
-
 /*===========================
       1. COMMON css 
 ===========================*/
@@ -124,7 +123,6 @@ p {
     height: 100%;
 }
 
-
 /*==== Section Title =====*/
 
 .section-title .title {
@@ -147,7 +145,6 @@ p {
     color: #6c6c6c;
     margin-top: 24px;
 }
-
 
 /*===== All Preloader Style =====*/
 
@@ -199,13 +196,22 @@ p {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-animation: ytp-spinner-easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
-    -moz-animation: ytp-spinner-easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
-    -o-animation: ytp-spinner-easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
-    animation: ytp-spinner-easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+    -webkit-animation: ytp-spinner-easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1)
+        infinite both;
+    -moz-animation: ytp-spinner-easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1)
+        infinite both;
+    -o-animation: ytp-spinner-easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1)
+        infinite both;
+    animation: ytp-spinner-easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite
+        both;
 }
 
-.preloader .loader .ytp-spinner .ytp-spinner-container .ytp-spinner-rotator .ytp-spinner-left {
+.preloader
+    .loader
+    .ytp-spinner
+    .ytp-spinner-container
+    .ytp-spinner-rotator
+    .ytp-spinner-left {
     position: absolute;
     top: 0;
     left: 0;
@@ -214,7 +220,12 @@ p {
     right: 50%;
 }
 
-.preloader .loader .ytp-spinner .ytp-spinner-container .ytp-spinner-rotator .ytp-spinner-right {
+.preloader
+    .loader
+    .ytp-spinner
+    .ytp-spinner-container
+    .ytp-spinner-rotator
+    .ytp-spinner-right {
     position: absolute;
     top: 0;
     right: 0;
@@ -239,22 +250,28 @@ p {
     left: 0;
     right: -100%;
     border-right-color: #cbced1;
-    -webkit-animation: ytp-spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
-    -moz-animation: ytp-spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
-    -o-animation: ytp-spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
-    animation: ytp-spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+    -webkit-animation: ytp-spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1)
+        infinite both;
+    -moz-animation: ytp-spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1)
+        infinite both;
+    -o-animation: ytp-spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1)
+        infinite both;
+    animation: ytp-spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1)
+        infinite both;
 }
 
 .preloader .loader .ytp-spinner-right .ytp-spinner-circle {
     left: -100%;
     right: 0;
     border-left-color: #cbced1;
-    -webkit-animation: ytp-right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
-    -moz-animation: ytp-right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
-    -o-animation: ytp-right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+    -webkit-animation: ytp-right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1)
+        infinite both;
+    -moz-animation: ytp-right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite
+        both;
+    -o-animation: ytp-right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite
+        both;
     animation: ytp-right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
-
 
 /* Preloader Animations */
 
@@ -492,7 +509,6 @@ p {
     }
 }
 
-
 /*===========================
        2.BUTTON css 
 ===========================*/
@@ -530,7 +546,6 @@ p {
         line-height: 40px;
     }
 }
-
 
 /*===== Rounded Buttons =====*/
 
@@ -577,9 +592,19 @@ p {
 .rounded-buttons .rounded-three {
     overflow: hidden;
     line-height: 52px;
-    background: -webkit-linear-gradient( left, #70bb97 0%, #32b777 50%, #70bb97 100%);
+    background: -webkit-linear-gradient(
+        left,
+        #70bb97 0%,
+        #32b777 50%,
+        #70bb97 100%
+    );
     background: -o-linear-gradient(left, #70bb97 0%, #32b777 50%, #70bb97 100%);
-    background: linear-gradient(to right, #70bb97 0%, #32b777 50%, #70bb97 100%);
+    background: linear-gradient(
+        to right,
+        #70bb97 0%,
+        #32b777 50%,
+        #70bb97 100%
+    );
     background-size: 200% auto;
     color: #fff;
     border: 0;
@@ -696,9 +721,19 @@ p {
     padding-right: 60px;
     overflow: hidden;
     line-height: 52px;
-    background: -webkit-linear-gradient( left, #43cae9 0%, #38f9d7 50%, #43cae9 100%);
+    background: -webkit-linear-gradient(
+        left,
+        #43cae9 0%,
+        #38f9d7 50%,
+        #43cae9 100%
+    );
     background: -o-linear-gradient(left, #43cae9 0%, #38f9d7 50%, #43cae9 100%);
-    background: linear-gradient(to right, #43cae9 0%, #38f9d7 50%, #43cae9 100%);
+    background: linear-gradient(
+        to right,
+        #43cae9 0%,
+        #38f9d7 50%,
+        #43cae9 100%
+    );
     background-size: 200% auto;
     color: #fff;
     border: 0;
@@ -786,11 +821,9 @@ p {
     }
 }
 
-
 /*===========================
        3.HEADER css 
 ===========================*/
-
 
 /*===== NAVBAR EIGHT =====*/
 
@@ -839,7 +872,8 @@ p {
 .navbar-area .navbar .navbar-toggler .toggler-icon {
     width: 30px;
     height: 2px;
-    background-color: #121212;
+    /* background-color: #121212; */
+    background-color: #fff;
     margin: 5px 0;
     display: block;
     position: relative;
@@ -878,7 +912,8 @@ p {
         top: 108%;
         left: 0;
         width: 100%;
-        background-color: #32b777;
+        /* background-color: #32b777; */
+        background-color: #333333;
         z-index: 8;
         padding: 10px 16px;
         -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -893,7 +928,8 @@ p {
         top: 108%;
         left: 0;
         width: 100%;
-        background-color: #32b777;
+        /* background-color: #32b777; */
+        background-color: #333333;
         z-index: 8;
         padding: 10px 16px;
         -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -920,6 +956,28 @@ p {
 
 .navbar-area .navbar .navbar-nav .nav-item {
     position: relative;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    /* color: red; */
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover,
+.dropdown-item:focus {
+    color: #16181b;
+    /* color: red; */
+    text-decoration: none;
+    background-color: #f8f9fa;
 }
 
 .navbar-area .navbar .navbar-nav .nav-item a {
@@ -989,8 +1047,8 @@ p {
     }
 }
 
-.navbar-area .navbar .navbar-nav .nav-item.active>a::before,
-.navbar-area .navbar .navbar-nav .nav-item:hover>a::before {
+.navbar-area .navbar .navbar-nav .nav-item.active > a::before,
+.navbar-area .navbar .navbar-nav .nav-item:hover > a::before {
     -webkit-transform: translateX(-50%) scaleX(1);
     -moz-transform: translateX(-50%) scaleX(1);
     -ms-transform: translateX(-50%) scaleX(1);
@@ -1181,15 +1239,15 @@ p {
     color: #fff;
 }
 
-.navbar-area .navbar .navbar-nav .nav-item .sub-menu li:hover>a {
+.navbar-area .navbar .navbar-nav .nav-item .sub-menu li:hover > a {
     color: #fff;
 }
 
-.navbar-area .navbar .navbar-nav .nav-item .sub-menu li:hover>a::after {
+.navbar-area .navbar .navbar-nav .nav-item .sub-menu li:hover > a::after {
     opacity: 1;
 }
 
-.navbar-area .navbar .navbar-nav .nav-item .sub-menu li:hover>a::before {
+.navbar-area .navbar .navbar-nav .nav-item .sub-menu li:hover > a::before {
     opacity: 1;
 }
 
@@ -1496,7 +1554,6 @@ p {
     display: block;
 }
 
-
 /*===== SLIDER ONE =====*/
 
 .slider-area {
@@ -1529,7 +1586,12 @@ p {
     }
 }
 
-.slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption {
+.slider-area
+    .bd-example
+    .carousel
+    .carousel-inner
+    .carousel-item
+    .carousel-caption {
     top: 50%;
     bottom: auto;
     -webkit-transform: translateY(-50%);
@@ -1541,7 +1603,13 @@ p {
     left: 0;
 }
 
-.slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-title {
+.slider-area
+    .bd-example
+    .carousel
+    .carousel-inner
+    .carousel-item
+    .carousel-caption
+    .carousel-title {
     font-size: 44px;
     font-weight: 700;
     color: #fff;
@@ -1549,33 +1617,77 @@ p {
 }
 
 @media (max-width: 767px) {
-    .slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-title {
+    .slider-area
+        .bd-example
+        .carousel
+        .carousel-inner
+        .carousel-item
+        .carousel-caption
+        .carousel-title {
         font-size: 24px;
         line-height: 32px;
     }
 }
 
-.slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-btn li {
+.slider-area
+    .bd-example
+    .carousel
+    .carousel-inner
+    .carousel-item
+    .carousel-caption
+    .carousel-btn
+    li {
     display: inline-block;
     margin: 16px 8px 0;
 }
 
 @media (max-width: 767px) {
-    .slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-btn li {
+    .slider-area
+        .bd-example
+        .carousel
+        .carousel-inner
+        .carousel-item
+        .carousel-caption
+        .carousel-btn
+        li {
         margin: 16px 3px 0;
     }
 }
 
-.slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-btn li a.rounded-three {
+.slider-area
+    .bd-example
+    .carousel
+    .carousel-inner
+    .carousel-item
+    .carousel-caption
+    .carousel-btn
+    li
+    a.rounded-three {
     border: 0;
 }
 
-.slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-btn li a.rounded-one {
+.slider-area
+    .bd-example
+    .carousel
+    .carousel-inner
+    .carousel-item
+    .carousel-caption
+    .carousel-btn
+    li
+    a.rounded-one {
     border-color: #fff;
     color: #fff;
 }
 
-.slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-btn li a.rounded-one:hover {
+.slider-area
+    .bd-example
+    .carousel
+    .carousel-inner
+    .carousel-item
+    .carousel-caption
+    .carousel-btn
+    li
+    a.rounded-one:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1711,7 +1823,6 @@ p {
     }
 }
 
-
 /*===== HEADER TOW =====*/
 
 .header-hero {
@@ -1738,9 +1849,24 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: -webkit-linear-gradient( rgba(232, 237, 255, 0.9), rgba(239, 254, 255, 0.9) 50%, rgba(254, 255, 244, 0.3) 68%, rgba(255, 255, 255, 0.12));
-    background: -o-linear-gradient( rgba(232, 237, 255, 0.9), rgba(239, 254, 255, 0.9) 50%, rgba(254, 255, 244, 0.3) 68%, rgba(255, 255, 255, 0.12));
-    background: linear-gradient( rgba(232, 237, 255, 0.9), rgba(239, 254, 255, 0.9) 50%, rgba(254, 255, 244, 0.3) 68%, rgba(255, 255, 255, 0.12));
+    background: -webkit-linear-gradient(
+        rgba(232, 237, 255, 0.9),
+        rgba(239, 254, 255, 0.9) 50%,
+        rgba(254, 255, 244, 0.3) 68%,
+        rgba(255, 255, 255, 0.12)
+    );
+    background: -o-linear-gradient(
+        rgba(232, 237, 255, 0.9),
+        rgba(239, 254, 255, 0.9) 50%,
+        rgba(254, 255, 244, 0.3) 68%,
+        rgba(255, 255, 255, 0.12)
+    );
+    background: linear-gradient(
+        rgba(232, 237, 255, 0.9),
+        rgba(239, 254, 255, 0.9) 50%,
+        rgba(254, 255, 244, 0.3) 68%,
+        rgba(255, 255, 255, 0.12)
+    );
 }
 
 .header-hero .header-content {
@@ -1831,7 +1957,6 @@ p {
     width: 100%;
 }
 
-
 /*===========================
          4.ABOUT css 
 ===========================*/
@@ -1921,7 +2046,6 @@ p {
     color: #121212;
     margin-top: 16px;
 }
-
 
 /*===== ABOUT 2  =====*/
 
@@ -2036,7 +2160,6 @@ p {
     margin-top: 8px;
 }
 
-
 /*===== ABOUT 3 =====*/
 
 .about-area-3 {
@@ -2115,7 +2238,6 @@ p {
 .about-area-3.about-area-bg-3 {
     background-color: #fff;
 }
-
 
 /*===========================
       19.portfolio css 
@@ -2230,13 +2352,22 @@ p {
     padding: 16px;
 }
 
-.single-portfolio .portfolio-image .portfolio-overlay .portfolio-content .portfolio-icon {
+.single-portfolio
+    .portfolio-image
+    .portfolio-overlay
+    .portfolio-content
+    .portfolio-icon {
     position: relative;
     display: inline-block;
     margin: 0 20px;
 }
 
-.single-portfolio .portfolio-image .portfolio-overlay .portfolio-content .portfolio-icon a {
+.single-portfolio
+    .portfolio-image
+    .portfolio-overlay
+    .portfolio-content
+    .portfolio-icon
+    a {
     font-size: 48px;
     color: #38f9d7;
     position: relative;
@@ -2244,7 +2375,12 @@ p {
     line-height: 50px;
 }
 
-.single-portfolio .portfolio-image .portfolio-overlay .portfolio-content .portfolio-icon .shape {
+.single-portfolio
+    .portfolio-image
+    .portfolio-overlay
+    .portfolio-content
+    .portfolio-icon
+    .shape {
     position: absolute;
     top: 7px;
     left: 0;
@@ -2296,7 +2432,6 @@ p {
 .portfolio-2 {
     background-color: #f4f6f7;
 }
-
 
 /*===========================
        25.SERVICES css 
@@ -2367,7 +2502,6 @@ p {
 .single-services:hover .services-content .text {
     color: #fff;
 }
-
 
 /*===========================
       16.PRICING css 
@@ -2576,7 +2710,6 @@ p {
     margin-top: 26px;
 }
 
-
 /*===========================
         25.ERROR css 
 ===========================*/
@@ -2697,9 +2830,19 @@ p {
 }
 
 .call-action-3 {
-    background: -webkit-linear-gradient( left, #43cae9 0%, #38f9d7 50%, #43cae9 100%);
+    background: -webkit-linear-gradient(
+        left,
+        #43cae9 0%,
+        #38f9d7 50%,
+        #43cae9 100%
+    );
     background: -o-linear-gradient(left, #43cae9 0%, #38f9d7 50%, #43cae9 100%);
-    background: linear-gradient(to right, #43cae9 0%, #38f9d7 50%, #43cae9 100%);
+    background: linear-gradient(
+        to right,
+        #43cae9 0%,
+        #38f9d7 50%,
+        #43cae9 100%
+    );
 }
 
 .call-action-3 .call-action-content .action-title {
@@ -2749,7 +2892,6 @@ p {
     background-color: rgba(255, 255, 255, 0.3);
     color: #fff;
 }
-
 
 /*===========================
         28.ERROR css 
@@ -2908,11 +3050,9 @@ p {
     background-color: #70bb97;
 }
 
-
 /*===========================
        25.CLIENT css 
 ===========================*/
-
 
 /*===== Client Logo Two =====*/
 
@@ -2924,7 +3064,6 @@ p {
 .client-logo-2 {
     background-color: #f4f6f7;
 }
-
 
 /*===========================
        21.BLOG css 
@@ -2994,7 +3133,6 @@ p {
     color: #38f9d7;
     margin-top: 29px;
 }
-
 
 /*===========================
       20.CONTACT css 
@@ -3180,7 +3318,6 @@ p {
     color: #6c6c6c;
 }
 
-
 /*===========================
     22.HEADER css 
 ===========================*/
@@ -3296,7 +3433,6 @@ p {
     color: #38f9d7;
 }
 
-
 /*===== BACK TO TOP =====*/
 
 .back-to-top {
@@ -3324,6 +3460,5 @@ p {
     color: #121212;
     background-color: #32b777;
 }
-
 
 /*# sourceMappingURL=style.css.map */

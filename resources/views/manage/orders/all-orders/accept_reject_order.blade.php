@@ -2,6 +2,11 @@
 
 @section('content')
 <div class="container">
+    <div class="row">
+        <div class="col">
+            @include('layouts.alerts')
+        </div>
+    </div>
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
@@ -24,9 +29,13 @@
                         <div class="form-group pb-2">
                             <label for="accept_order">Reject Order</label>
                             <select class="form-inline" name="accept_order">
+                                @if ($order->accept_order === 0)
+                                    <option value="0">{{"Pending"}}</option>
+                                    <option value="1">Accepted</option>
+                                    <option value="2">Rejected</option>
+                                @endif
                                 @if ($order->accept_order === 1)
                                     <option value="1">{{"Accepted"}}</option>
-                                    <option value="2">Rejected</option>
                                 @endif
                                 @if ($order->accept_order === 2) {
                                     <option value="2">{{"Rejected"}}</option>
@@ -35,13 +44,13 @@
                         </div>
 
                         <div class="form-group pb-2">
-                            <label for="reject_reason">Reason for rejection</label>
-                            <textarea class="form-control" type="text" name="reject_reason" id="reject_reason" cols="30" rows="3" required>{{$order->reject_reason}}</textarea>
+                            <label for="reject_reason">Reason for rejection(if rejecting)</label>
+                            <textarea class="form-control" type="text" name="reject_reason" id="reject_reason" cols="30" rows="3">{{$order->reject_reason}}</textarea>
                         </div>
 
                         <div class="cart-buttons">
                             <a href="{{ route('all-orders.index') }}" class="btn btn-sm btn-warning"><i class="fa fa-angle-left"></i> Back</a>
-                            <button type="submit" class="btn btn-sm btn-success float-right">Reject <i class="fa fa-angle-right"></i></button>
+                            <button type="submit" class="btn btn-sm btn-success float-right">Accept/Reject <i class="fa fa-angle-right"></i></button>
                         </div>
                     </form>                    
                 </div>

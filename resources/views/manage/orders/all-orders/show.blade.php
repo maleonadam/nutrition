@@ -54,32 +54,38 @@
                                             <th class="text-center">No. of samples</th>
                                             <th class="text-center">Item Status</th>
                                             <th class="text-center">Item Results</th>
-                                            <th class="text-center">Change status</th>
+                                            <th class="text-center">Update status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($products as $product)
+                                        @foreach($order_products as $order_product)
                                             <tr>
-                                                <td>{{ $product->name }}</td>
-                                                <td>{{ $product->details }}</td>
-                                                <td class="text-center">{{ $product->pivot->quantity }}</td>
+                                                <td>{{ $order_product->product->name }}</td>
+                                                <td>{{ $order_product->product->details }}</td>
+                                                <td class="text-center">{{ $order_product->quantity }}</td>
                                                 <td class="text-center">
-                                                    @if($product->pivot->item_status === 1)
+                                                    @if($order_product->item_status === 1)
                                                     <p class="badge badge-light">submitted</p>
-                                                    @elseif($product->pivot->item_status === 2)
+                                                    @elseif($order_product->item_status === 2)
                                                     <p class="badge badge-info">received</p>
-                                                    @elseif($product->pivot->item_status === 3)
+                                                    @elseif($order_product->item_status === 3)
                                                     <p class="badge badge-warning">processing</p>
                                                     @else 
                                                     <p class="badge badge-success">completed</p>
                                                     @endif 
                                                 </td>
-                                                <td class="text-center">
-                                                    <a href="{{ route('all-order-items.result', $product->id) }}" class="btn btn-outline-warning btn-sm">
-                                                        <i class="fa fa-upload">upload</i>
-                                                    </a>
-                                                </td>
-                                                <td class="text-center"><a href="{{ route('all-order-items.edit', $product->pivot->product_id) }}" class="btn btn-outline-success btn-sm">
+                                                
+                                                @if($order_product->item_result === null)
+                                                    <td class="text-center">
+                                                        <a href="{{ route('all-order-items.result', $order_product->id) }}" class="btn btn-outline-warning btn-sm">
+                                                            <i class="fa fa-upload">upload</i>
+                                                        </a>
+                                                    </td>
+                                                @else
+                                                    <td scope="row" class="text-center"><a href="/item_result/download/{{$order_product->item_result}}">{{ $order_product->item_result }}</a></td>
+                                                @endif
+
+                                                <td class="text-center"><a href="{{ route('all-order-items.edit', $order_product->id) }}" class="btn btn-outline-success btn-sm">
                                                     <i class="fa fa-edit">update</i>
                                                 </a></td>
                                             </tr>

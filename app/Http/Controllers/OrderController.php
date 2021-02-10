@@ -30,10 +30,10 @@ class OrderController extends Controller
     // my orders
     public function index()
     {
-        $orders = Auth::user()->orders()->paginate(10);
+        $orders = Auth::user()->orders()->orderBy('created_at', 'desc')->paginate(10);
 
         $products = Product::orderBy('created_at', 'ASC')->get();
-
+    
         return view('manage.orders.my-orders.index', compact('orders', 'products'));
     }
 
@@ -52,9 +52,12 @@ class OrderController extends Controller
     { 
         $order = Order::findOrFail($id);
 
-        $products = $order->products;
+        // $products = $order->products;
+        $order_products = OrderProduct::where('order_id', $id)->get();
 
-        return view('manage.orders.my-orders.show', compact('order', 'products'));
+        $products = Product::join('order_products', 'products.id', '=', 'order_products.product_id');
+
+        return view('manage.orders.my-orders.show', compact(['order', 'order_products','products']));
     }
 
     // staff view single order
@@ -62,9 +65,11 @@ class OrderController extends Controller
     {
         $order = Order::findOrFail($id);
 
-        $products = $order->products;
+        $order_products = OrderProduct::where('order_id', $id)->get();
+        // dd($order_products);
+        $products = Product::join('order_products', 'products.id', '=', 'order_products.product_id');
 
-        return view('manage.orders.all-orders.show', compact('order', 'products'));
+        return view('manage.orders.all-orders.show', compact(['order', 'order_products','products']));
     }
 
     // get order status page
@@ -107,35 +112,67 @@ class OrderController extends Controller
         
         $order->save();
 
+        if ($order->accept_order == 2) {
+            // send mail
+            Mail::send(new OrderRejected($order));
+        }
         // send mail
-        Mail::send(new OrderRejected($order));
+        // Mail::send(new OrderRejected($order));
 
-        Session::flash('error', 'Order has been rejected!!!');
+        // Session::flash('error', 'Order has been rejected!!!');
         return redirect()->route('all-orders.index');
     }
 
-    // get order item status page
-    // public function editItemStatus($id)
-    // {
-    //     $order = Order::findOrFail($id);
+    public function editItemStatus($id)
+    { 
+        $order_product = OrderProduct::findOrFail($id);
+        return view('manage.order_items.item_status', compact('order_product'));
+    }
 
-    //     $products = $order->products;
+    public function updateItemStatus(Request $request, $id)
+    {
+        $order_product = OrderProduct::findOrFail($id);
 
-    //     return view('manage.order_items.item_status', compact('order', 'products'));
-    // }
+        $order_product->item_status = $request->input('item_status');
 
-    // update order item status
-    // public function updateItemStatus(Request $request, $id)
-    // {
-    //     $order_product = OrderProduct::findOrFail($id);
+        $order_product->save();
 
-    //     $order_product->item_status = $request->item_status;
+        Session::flash('success-message', 'Status updated successfully...');
+        return back();
+    }
 
-    //     $order_product->save();
+    public function itemResult($id)
+    {
+        $order_product = OrderProduct::findOrFail($id);
+        return view('manage.order_items.item_result', compact('order_product'));
+    }
 
-    //     Session::flash('success-message', 'Item status updated successfully...');
-    //     return redirect()->route('all-orders.index');
-    // }
+    public function uploadItemResult(Request $request, $id)
+    {
+        $order_product = OrderProduct::findOrFail($id);
+
+        if ($request->file('item_result')) {
+            $item_result = $request->file('item_result');
+            $filename = time().'.'.$item_result->getClientOriginalExtension();
+            $request->item_result->move('storage/itemresult', $filename);
+
+            $order_product->item_result = $filename;
+        }
+
+        $order_product->save();
+
+        // send mail
+        // Mail::send(new ResultsUploaded($order));
+
+        Session::flash('success-message', 'Results uploaded successfully...');
+        return back();
+    }
+
+    // download item results
+    public function downloadItemResult($item_result)
+    {
+        return response()->download('storage/itemresult/'.$item_result);
+    }
 
     // delete order
     public function destroy(Order $order)
@@ -208,7 +245,7 @@ class OrderController extends Controller
         $order->save();
 
         // send mail
-        Mail::send(new BudgetUploaded($order));
+        // Mail::send(new BudgetUploaded($order));
 
         Session::flash('success-message', 'Budget uploaded successfully...');
         return redirect()->route('all-orders.index');
@@ -230,7 +267,7 @@ class OrderController extends Controller
         $order->save();
 
         // send mail
-        Mail::send(new InvoiceUploaded($order));
+        // Mail::send(new InvoiceUploaded($order));
 
         Session::flash('success-message', 'Invoice uploaded successfully...');
         return redirect()->route('all-orders.index');
@@ -252,7 +289,7 @@ class OrderController extends Controller
         $order->save();
 
         // send mail
-        Mail::send(new PaymentUploaded($order));
+        // Mail::send(new PaymentUploaded($order));
 
         Session::flash('success-message', 'Payment Receipt uploaded successfully...');
         return redirect()->route('my-orders.index');
@@ -274,7 +311,7 @@ class OrderController extends Controller
         $order->save();
 
         // send mail
-        Mail::send(new ServiceUploaded($order));
+        // Mail::send(new ServiceUploaded($order));
 
         Session::flash('success-message', 'Service Specification uploaded successfully...');
         return redirect()->route('all-orders.index');
@@ -296,13 +333,12 @@ class OrderController extends Controller
         $order->save();
 
         // send mail
-        Mail::send(new SignedServiceUploaded($order));
+        // Mail::send(new SignedServiceUploaded($order));
 
         Session::flash('success-message', 'Signed Service Specification uploaded successfully...');
         return redirect()->route('my-orders.index');
     }
 
-    
     // upload order results
     public function uploadResults(Request $request, $id)
     {
@@ -319,7 +355,7 @@ class OrderController extends Controller
         $order->save();
 
         // send mail
-        Mail::send(new ResultsUploaded($order));
+        // Mail::send(new ResultsUploaded($order));
 
         Session::flash('success-message', 'Results uploaded successfully...');
         return redirect()->route('all-orders.index');

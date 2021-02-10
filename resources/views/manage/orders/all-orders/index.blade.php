@@ -38,7 +38,7 @@
                                 <th scope="col">Order no.</th>
                                 <!-- <th scope="col" class="text-center">Placed on</th>
                                 <th scope="col" class="text-center">Placed by</th> -->
-                                <th scope="col" class="text-center">Status</th>
+                                <!-- <th scope="col" class="text-center">Status</th> -->
                                 <th scope="col" class="text-center">Budget</th>
                                 <th scope="col" class="text-center">Invoice</th>
                                 <th scope="col" class="text-center">Payment receipt</th>
@@ -64,7 +64,7 @@
                                     {{ $order->user->name }}
                                   </td> -->
                                   
-                                  <td scope="row" class="text-center"> 
+                                  <!-- <td scope="row" class="text-center"> 
                                     @if($order->order_status_id === 1)
                                       <p class="badge badge-light">submitted</p>
                                     @elseif($order->order_status_id === 2)
@@ -74,7 +74,7 @@
                                     @else 
                                       <p class="badge badge-success">completed</p>
                                     @endif 
-                                  </td>
+                                  </td> -->
 
                                   @if($order->budget === null)
                                     <td scope="row" class="text-center">
@@ -138,15 +138,15 @@
                                     <td scope="row" class="text-center"><a href="/rawdata/download/{{$order->raw_data}}">{{ $order->raw_data }}</a></td>
                                   @endif
 
-                                  <td scope="row" class="text-center">
+                                  <td scope="row">
                                       <a href="{{ route('all-orders.show', $order->id) }}" class="btn btn-outline-primary btn-sm">
                                         <i class="fa fa-eye">view</i>
                                       </a> 
                                       <a href="{{ route('all-orders.edit', $order->id) }}" class="btn btn-outline-success btn-sm">
                                         <i class="fa fa-edit">edit</i>
                                       </a>
-                                      <a href="{{ route('all-orders.getreject', $order->id) }}" class="btn btn-outline-danger btn-sm">
-                                        <i class="fa fa-ban">reject</i>
+                                      <a href="{{ route('all-orders.getreject', $order->id) }}" class="btn btn-outline-warning btn-sm">
+                                        <i class="fa fa-ban">change</i>
                                       </a>
                                       <!-- <a href="#" class="btn btn-outline-danger btn-sm disabled">
                                         <i class="fa fa-trash">del</i>
@@ -159,7 +159,6 @@
                             <tfoot class="table-dark">
                                 <tr>
                                     <td>&nbsp;</td>
-                                    <td><strong></strong></td>
                                     <td><strong></strong></td>
                                     <td><strong></strong></td>
                                     <td><strong></strong></td>

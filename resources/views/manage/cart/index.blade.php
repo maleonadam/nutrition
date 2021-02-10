@@ -50,7 +50,7 @@
 
                                                 <input type="hidden" name="proId" value="{{ $item->rowId }}"/>
                                                 <input type="number" size="2" MIN="1" MAX="1000" name="qty" value="{{ $item->qty }}"/>
-                                                <button class="btn btn-warning btn-sm" type="submit"><i class="fa fa-refresh">update</i></button>
+                                                <button class="btn btn-warning btn-sm" type="submit"><i class="fa fa-refresh"></i></button>
                                             </form>
                                         </td>
                                         <td class="text-center">{{ $item->subtotal }}</td>
@@ -59,7 +59,7 @@
                                                 {{ csrf_field() }}
                                                 {{ method_field('DELETE') }}
 
-                                                <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-times">remove</i></button>
+                                                <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-times"></i></button>
                                             </form>
                                         </td>
                                     </tr>
@@ -89,8 +89,8 @@
                     </div>
                     <div class="card-body">
                         <div class="cart-buttons">
-                            <a href="{{ route('allproducts') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Add More Products</a>
-                            <a href="{{ route('checkout.index') }}" class="btn btn-success float-right">Proceed to Checkout <i class="fa fa-angle-right"></i></a>
+                            <a href="{{ route('allproducts') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Add Products</a>
+                            <a href="{{ route('checkout.index') }}" class="btn btn-success float-right">Checkout <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                     @else

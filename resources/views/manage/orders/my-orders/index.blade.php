@@ -24,7 +24,7 @@
                           <tr>
                             <th scope="col">Order no.</th>
                             <!-- <th scope="col">Place on</th> -->
-                            <th scope="col" class="text-center">Status</th>
+                            <!-- <th scope="col" class="text-center">Status</th> -->
                             <th scope="col" class="text-center">Budget</th>
                             <th scope="col" class="text-center">Invoice</th>
                             <th scope="col" class="text-center">Payment receipt</th>
@@ -48,7 +48,7 @@
                                   {{ $order->created_at->toFormattedDateString() }}
                                 </td> -->
 
-                                <td scope="row" class="text-center"> 
+                                <!-- <td scope="row" class="text-center"> 
                                   @if($order->order_status_id === 1)
                                     <p class="badge badge-light">submitted</p>
                                   @elseif($order->order_status_id === 2)
@@ -58,7 +58,7 @@
                                   @else 
                                     <p class="badge badge-success">completed</p>
                                   @endif 
-                                </td> 
+                                </td>  -->
 
                                 @if($order->budget === null)
                                   <td scope="row" class="text-center"><p class="badge badge-light">pending!</p></td>
@@ -111,7 +111,9 @@
                                 @endif
 
                                 <td scope="row" class="text-center"> 
-                                  @if($order->accept_order === 1)
+                                  @if($order->accept_order === 0)
+                                    <p class="badge badge-secondary">pending</p>
+                                  @elseif($order->accept_order === 1)
                                     <p class="badge badge-info">accepted</p>
                                   @elseif($order->accept_order === 2)
                                     <p class="badge badge-danger">rejected</p>
@@ -141,7 +143,7 @@
                                 <td><strong></strong></td>
                                 <td><strong></strong></td>
                                 <td><strong></strong></td>
-                                <td><strong></strong></td>
+                                <!-- <td><strong></strong></td> -->
                             </tr>
                         </tfoot>
                       </table>

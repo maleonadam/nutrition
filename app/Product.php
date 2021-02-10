@@ -5,6 +5,7 @@ namespace App;
 use Gloudemans\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 use App\Order;
+use App\OrderProduct;
 
 class Product extends Model implements Buyable
 {
@@ -58,5 +59,11 @@ class Product extends Model implements Buyable
     // relate with orders
     public function orders(){
         return $this->belongsToMany(Order::class, 'order_products');
+    }
+
+    // relate with order_products
+    public function order_products()
+    {
+        return $this->hasMany(OrderProduct::class);
     }
 }

@@ -135,9 +135,9 @@
                                 </ul>
                             </div>
 
-                            <div class="navbar-btn d-none mt-15 d-lg-inline-block">
+                            <!-- <div class="navbar-btn d-none mt-15 d-lg-inline-block">
                                 <a class="menu-bar" href="#side-menu-right"><i class="lni-menu"></i></a>
-                            </div>
+                            </div> -->
                         </nav>
                         <!-- navbar -->
                     </div>
@@ -151,7 +151,7 @@
     <!--====== NAVBAR PART ENDS ======-->
 
     <!--====== SIDEBAR PART START ======-->
-    <div class="sidebar-right">
+    <!-- <div class="sidebar-right">
         <div class="sidebar-close">
             <a class="close" href="#close"><i class="lni-close"></i></a>
         </div>
@@ -164,12 +164,9 @@
                     <li><a href="#">Contacts</a></li>
                 </ul>
             </div>
-            <!-- menu -->
-            <!-- sidebar social -->
         </div>
-        <!-- content -->
-    </div>
-    <div class="overlay-right"></div>
+    </div> -->
+    <!-- <div class="overlay-right"></div> -->
     <!--====== SIDEBAR PART ENDS ======-->
     
     <!--====== services PART START ======-->

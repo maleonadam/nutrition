@@ -49,13 +49,27 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($products as $product)
+                                        @foreach($order_products as $order_product)
                                             <tr>
-                                                <td>{{ $product->name }}</td>
-                                                <td>{{ $product->details }}</td>
-                                                <td class="text-center">{{ $product->pivot->quantity }}</td>
-                                                <td class="text-center"><p class="badge badge-light">submitted</p></td>
-                                                <td class="text-center"><p class="badge badge-light">pending!</p></td>
+                                                <td>{{ $order_product->product->name }}</td>
+                                                <td>{{ $order_product->product->details }}</td>
+                                                <td class="text-center">{{ $order_product->quantity }}</td>
+                                                <td class="text-center">
+                                                    @if($order_product->item_status === 1)
+                                                    <p class="badge badge-light">submitted</p>
+                                                    @elseif($order_product->item_status === 2)
+                                                    <p class="badge badge-info">received</p>
+                                                    @elseif($order_product->item_status === 3)
+                                                    <p class="badge badge-warning">processing</p>
+                                                    @else 
+                                                    <p class="badge badge-success">completed</p>
+                                                    @endif 
+                                                </td>
+                                                @if($order_product->item_result === null)
+                                                    <td scope="row" class="text-center"><p class="badge badge-light">pending!</p></td>
+                                                @else
+                                                    <td scope="row" class="text-center"><a href="/item_result/download/{{$order_product->item_result}}">Download</a></td>
+                                                @endif
                                             </tr>
                                         @endforeach
                                     </tbody>

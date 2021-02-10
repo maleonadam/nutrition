@@ -18,6 +18,7 @@ Route::get('/services', 'WebsiteController@services')->name('services');
 Route::get('/products', 'WebsiteController@allProducts')->name('allproducts');
 Route::get('/feedback', 'WebsiteController@feedback')->name('feedback');
 Route::post('/feedback', 'WebsiteController@submitFeedback')->name('submitfeedback');
+Route::post('/inquiry', 'WebsiteController@submitInquiry')->name('submitinquiry');
 
 // Route::get('/products/{product}', 'WebsiteController@store')->name('products.show');
 
@@ -62,14 +63,16 @@ Route::patch('/all-orders/invoice/{id}', 'OrderController@uploadInvoice')->name(
 
 Route::get('/all-orders/service/{id}', 'OrderController@service')->name('all-orders.service')->middleware(['role:staff', 'auth']);
 Route::patch('/all-orders/service/{id}', 'OrderController@uploadService')->name('all-orders.upload-service')->middleware(['role:staff', 'auth']);
+
 Route::get('/all-orders/results/{id}', 'OrderController@results')->name('all-orders.results')->middleware(['role:staff', 'auth']);
 Route::patch('/all-orders/results/{id}', 'OrderController@uploadResults')->name('all-orders.upload-results')->middleware(['role:staff', 'auth']);
+
 Route::get('/all-orders/rawdata/{id}', 'OrderController@rawdata')->name('all-orders.rawdata')->middleware(['role:staff', 'auth']);
 Route::patch('/all-orders/rawdata/{id}', 'OrderController@uploadRawdata')->name('all-orders.upload-rawdata')->middleware(['role:staff', 'auth']);
 
 
-Route::get('/all-order-items/{product_id}', 'OrderController@editItemStatus')->name('all-order-items.edit')->middleware(['role:staff', 'auth']);
-Route::patch('/all-order-items/{product_id}', 'OrderController@updateItemStatus')->name('all-order-items.update')->middleware(['role:staff', 'auth']);
+Route::get('/all-order-items/{id}', 'OrderController@editItemStatus')->name('all-order-items.edit')->middleware(['role:staff', 'auth']);
+Route::patch('/all-order-items/{id}', 'OrderController@updateItemStatus')->name('all-order-items.update')->middleware(['role:staff', 'auth']);
 Route::get('/all-order-items/result/{id}', 'OrderController@itemResult')->name('all-order-items.result')->middleware(['role:staff', 'auth']);
 Route::patch('/all-order-items/result/{id}', 'OrderController@uploadItemResult')->name('all-order-items.upload-result')->middleware(['role:staff', 'auth']);
 
@@ -81,6 +84,7 @@ Route::get('/budget/download/{invoice}', 'OrderController@downloadInvoice');
 Route::get('/service/download/{service}', 'OrderController@downloadService');
 Route::get('/file/download/{result}', 'OrderController@downloadResults');
 Route::get('/rawdata/download/{rawdata}', 'OrderController@downloadRawdata');
+Route::get('/item_result/download/{item_result}', 'OrderController@downloadItemResult');
 
 Route::post('search-orders', 'OrderController@search')->middleware(['role:staff', 'auth']);
 

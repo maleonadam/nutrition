@@ -11,7 +11,7 @@ Go to Website
 
 Thank you again for choosing us. Please provide us feedback here.
 
-@component('mail::button', ['url' => config('app.url/feedback'), 'color' => 'green'])
+@component('mail::button', ['url' => 'http://127.0.0.1:8000/feedback', 'color' => 'green'])
 Give us Feedback
 @endcomponent
 

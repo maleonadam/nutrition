@@ -13,6 +13,9 @@
     <!--====== Title ======-->
     <title>Nutrition - Platform</title>
 
+    <!-- Scripts -->
+    <!-- <script src="{{ asset('js/app.js') }}"></script> -->
+
     <!--====== Favicon Icon ======-->
     <!-- <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png"> -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -73,7 +76,6 @@
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="#">
                                 <h3 style="color: #fff;">Nutrition</h3>
-                                <!-- <img src="#" alt="Logo"> -->
                             </a>
 
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarEight" aria-controls="navbarEight" aria-expanded="false" aria-label="Toggle navigation">
@@ -135,17 +137,10 @@
                                     @endguest
                                 </ul>
                             </div>
-
-                            <div class="navbar-btn d-none mt-15 d-lg-inline-block">
-                                <a class="menu-bar" href="#side-menu-right"><i class="lni-menu"></i></a>
-                            </div>
                         </nav>
-                        <!-- navbar -->
                     </div>
                 </div>
-                <!-- row -->
             </div>
-            <!-- container -->
         </div>
         <!-- navbar area -->
 
@@ -170,13 +165,9 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- row -->
                                 </div>
-                                <!-- container -->
                             </div>
-                            <!-- carousel caption -->
                         </div>
-                        <!-- carousel-item -->
 
                         <div class="carousel-item bg_cover" style="background-image: url(images/cow.jpg)">
                             <div class="carousel-caption">
@@ -189,13 +180,9 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- row -->
                                 </div>
-                                <!-- container -->
                             </div>
-                            <!-- carousel caption -->
                         </div>
-                        <!-- carousel-item -->
 
                         <div class="carousel-item bg_cover" style="background-image: url(images/we3.png)">
                             <div class="carousel-caption">
@@ -208,15 +195,10 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- row -->
                                 </div>
-                                <!-- container -->
                             </div>
-                            <!-- carousel caption -->
                         </div>
-                        <!-- carousel-item -->
                     </div>
-                    <!-- carousel-inner -->
 
                     <a class="carousel-control-prev" href="#carouselOne" role="button" data-slide="prev">
                         <i class="lni-arrow-left-circle"></i>
@@ -226,36 +208,11 @@
                         <i class="lni-arrow-right-circle"></i>
                     </a>
                 </div>
-                <!-- carousel -->
             </div>
-            <!-- bd-example -->
         </div>
-
     </section>
     <!--====== NAVBAR PART ENDS ======-->
 
-    <!--====== SIDEBAR PART START ======-->
-    <div class="sidebar-right">
-        <div class="sidebar-close">
-            <a class="close" href="#close"><i class="lni-close"></i></a>
-        </div>
-        <div class="sidebar-content">
-            <div class="sidebar-menu">
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </div>
-            <!-- menu -->
-            <!-- sidebar social -->
-        </div>
-        <!-- content -->
-    </div>
-    <div class="overlay-right"></div>
-    <!--====== SIDEBAR PART ENDS ======-->
-    
     <!--====== ABOUT PART START ======-->
     <section id="about" class="about-area">
         <div class="container">
@@ -285,13 +242,11 @@
                     </iframe>
                 </div>
             </div>
-            <!-- row -->
         </div>
-        <!-- container -->
     </section>
     <!--====== ABOUT PART ENDS ======-->
 
-    <!--====== services PART START ======-->
+    <!--====== SERVICES PART START ======-->
     <section id="portfolio" class="portfolio-area">
         <div class="container">
             <div class="row justify-content-center">
@@ -301,10 +256,8 @@
                         <hr style="border-top: 2px solid #800000;">
                         <p class="text">Below are some of the services you can request in the platform.</p>
                     </div>
-                    <!-- row -->
                 </div>
             </div>
-            <!-- row -->
             <div class="row">
                 <div class="col-lg-6">
                     <div class="single-about d-sm-flex mt-30 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.2s">
@@ -359,7 +312,6 @@
                     </div>
                 </div>
             </div>
-            <!-- row -->
             <div class="row justify-content-center">
                 <div class="col-lg-12 text-center wow fadeInUp mt-20" data-wow-duration="1s" data-wow-delay="1.2s">
                     <ul class="carousel-btn rounded-buttons">
@@ -367,13 +319,11 @@
                     </ul>
                 </div>
             </div>
-            <!-- row -->
         </div>
-        <!-- container -->
     </section>
-    <!--====== services PART ENDS ======-->
+    <!--====== SERVICES PART ENDS ======-->
 
-    <!--====== team STYLE EIGHT START ======-->
+    <!--====== TEAM PART START ======-->
     <section id="pricing" class="pricing-area">
         <div class="container">
             <div class="row justify-content-center">
@@ -383,47 +333,9 @@
                         <hr style="border-top: 2px solid#800000;">
                         <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                     </div>
-                    <!-- section title -->
                 </div>
             </div>
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-3 col-sm-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
-                    <div class="our-team">
-                        <div class="pic">
-                            <img src="{{ asset('images/team/img-2.jpg') }}" alt="">
-                        </div>
-                        <div class="team-content">
-                            <h3 class="title">Jacob Mignouna</h3>
-                            <span class="post">BecA Director</span>
-                            <ul class="social">
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">
-                    <div class="our-team">
-                        <div class="pic">
-                            <img src="{{ asset('images/team/img-1.jpg') }}" alt="">
-                        </div>
-                        <div class="team-content">
-                            <h3 class="title">Josephine Birungi</h3>
-                            <span class="post">Head of Technology</span>
-                            <ul class="social">
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="row justify-content-center">
                 <div class="col-md-3 col-sm-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
                     <div class="our-team">
                         <div class="pic">
@@ -460,77 +372,13 @@
                     </div>
                 </div>
             </div>
-            <!-- row -->
         </div>
-        <!-- container -->
     </section>
-    <!--====== team STYLE EIGHT ENDS ======-->
+    <!--====== TEAM PART ENDS ======-->
 
-    <!--====== CALL TO ACTION TWO PART START ======-->
+    <!--====== IMPACT PART START ======-->
     <section id="call-action" class="call-action-area">
         <div class="container">
-            <!-- <button style="width: 100%; margin-bottom: 1rem; border-radius: 0; border-color: #800000;" class="title" data-toggle="collapse" data-target="#emoji">Frequently Asked Questions</button> -->
-            <!-- <div class="collapse" id="emoji">
-                <div class="container-fluid padding">
-                    <div class="row">
-                        <p style="color: blue;">What additional facilities can be accessed through the platform?</p>
-                        <ul style="margin-bottom: 1rem;">
-                            <li><i class="lni-check-mark-circle"></i> Access to an assortment of glassware, cleaning and sterilization services.</li>
-                            <li><i class="lni-check-mark-circle"></i> A dedicated biosafety level 2 (BSL2) milling room with Romer II mills, among other sample processing and preparation techniques.</li>
-                            <li><i class="lni-check-mark-circle"></i> Plant growth facilities (greenhouse and screening house).
-                            </li>
-                        </ul>
-                        <p style="color: blue;">What Equipment is found on the platform?</p>
-                        <ul style="margin-bottom: 1rem;">
-                            <li><i class="lni-check-mark-circle"></i> MilkoFT Scanner.</li>
-                            <li><i class="lni-check-mark-circle"></i> Near Infrared scanner.</li>
-                            <li><i class="lni-check-mark-circle"></i> Ultra-performance liquid chromatograph linked to Photo Diode Array detector (UPLC-PDA), Fluorescent detector(UPLC-FLD), Evaporative Light Scattering Detector (UPLC-ELSD) and a fractional
-                                collector.
-                            </li>
-                            <li><i class="lni-check-mark-circle"></i> Ultra-performance Liquid chromatograph triple quadrupole mass spectrometer (UPLC-MS/MS).
-                            </li>
-                            <li><i class="lni-check-mark-circle"></i> Gas chromatograph – mass spectrometer (ion trap) (GC-MS).
-                            </li>
-                            <li><i class="lni-check-mark-circle"></i> Inductively coupled Plasma- optical emission spectrometer (ICP-OES).</li>
-                        </ul>
-                        <p style="color: blue;">Who manages the platform?</p>
-                        <ul style="margin-bottom: 1rem;">
-                            <li><i class="lni-check-mark-circle"></i> The Mycotoxin and Nutrition platform is managed by a team led by the Head of Technology and comprising of a diagnostics platform manager/assistant to the Head of Technology, a research
-                                officer and a research associate.
-                            </li>
-                            <li><i class="lni-check-mark-circle"></i> The platform is supported by:</li>
-                            <li>
-                                <ul style="margin-left: 1rem;">
-                                    <li><i class="lni-bolt"></i> The ILRI engineering unit that conducts regular maintenance and repair of equipment.
-                                    </li>
-                                    <li><i class="lni-bolt"></i> The occupational health and safety unit who provides support in biosafety related matters.</li>
-                                    <li><i class="lni-bolt"></i> The ILRI procurement team that helps in the purchase of consumables and other requirements of the platform.</li>
-                                    <li><i class="lni-bolt"></i> Laboratory assistants who offer support in cleaning of floor, work benches and access to central core unit for cleaning and sterilization of glassware.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <p style="color: blue;">How can an interested person get access to the Platform?</p>
-                        <ul style="margin-bottom: 1rem;">
-                            <li><i class="lni-check-mark-circle"></i> Potential users are encouraged to contact the laboratory management team well in advance to discuss their work plans and related requirements, and to ensure successful implementation of
-                                their projects.</li>
-                        </ul>
-                        <p style="color: blue;">Who are your clients?</p>
-                        <ul style="margin-bottom: 1rem;">
-                            <li><i class="lni-check-mark-circle"></i> The platform is open to researchers, regional research organizations or international research centers operating in Africa with particular focus on the following organizations:</li>
-                            <li>
-                                <ul style="margin-left: 1rem;">
-                                    <li><i class="lni-bolt"></i> African national agricultural research system breeding programs.
-                                    </li>
-                                    <li><i class="lni-bolt"></i> CG centers (ILRI, IFPRI, AfricaRice, CIAT, CIMMYT, CIP, ICRISAT, ICRAF, IITA, IRRI etc.).</li>
-                                    <li><i class="lni-bolt"></i> BecA-ILRI Hub users and partners from Africa and beyond.
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div> -->
-            <!-- row -->
             <div class="row">
                 <div class="four col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                     <div class="counter-box colored"> <i class="fa fa-thumbs-o-up"></i> <span class="counter">203</span>
@@ -554,11 +402,10 @@
                 </div>
             </div>
         </div>
-        <!-- container -->
     </section>
-    <!--====== CALL TO ACTION TWO PART ENDS ======-->
+    <!--====== IMPACT PART ENDS ======-->
 
-    <!--====== TESTIMONIAL THREE PART START ======-->
+    <!--====== TESTIMONIAL PART START ======-->
     <section id="testimonial" class="testimonial-area">
         <div class="container">
             <div class="row justify-content-center">
@@ -568,10 +415,8 @@
                         <hr style="border-top: 2px solid #800000;">
                         <p class="text">Here is what our clients say about us.</p>
                     </div>
-                    <!-- section title -->
                 </div>
             </div>
-            <!-- row -->
 
             <div class="row">
                 <div class="col-lg-12">
@@ -587,7 +432,6 @@
                                     <span class="sub-title">CEO, GrayGrids</span>
                                 </div>
                             </div>
-                            <!-- single testimonial -->
                         </div>
                         <div class="col-lg-4">
                             <div class="single-testimonial mt-30 mb-30 text-center">
@@ -600,7 +444,6 @@
                                     <span class="sub-title">Lead Designer, UIdeck</span>
                                 </div>
                             </div>
-                            <!-- single testimonial -->
                         </div>
                         <div class="col-lg-4">
                             <div class="single-testimonial mt-30 mb-30 text-center">
@@ -613,7 +456,6 @@
                                     <span class="sub-title">CEO, SpaceX</span>
                                 </div>
                             </div>
-                            <!-- single testimonial -->
                         </div>
                         <div class="col-lg-4">
                             <div class="single-testimonial mt-30 mb-30 text-center">
@@ -626,17 +468,13 @@
                                     <span class="sub-title">CEO, MakerFlix</span>
                                 </div>
                             </div>
-                            <!-- single testimonial -->
                         </div>
                     </div>
-                    <!-- row -->
                 </div>
             </div>
-            <!-- row -->
         </div>
-        <!-- container -->
     </section>
-    <!--====== TESTIMONIAL THREE PART ENDS ======-->
+    <!--====== TESTIMONIAL PART ENDS ======-->
 
     <!--====== CLIENT LOGO PART START ======-->
     <section id="client" class="client-logo-area">
@@ -646,70 +484,58 @@
                     <div class="single-client text-center">
                         <img src="{{ asset('images/clients/africarice.jpg') }}" alt="Logo">
                     </div>
-                    <!-- single client -->
                 </div>
                 <div class="col-lg-3">
                     <div class="single-client text-center">
                         <img src="{{ asset('images/clients/beca.png') }}" alt="Logo">
                     </div>
-                    <!-- single client -->
                 </div>
                 <div class="col-lg-3">
                     <div class="single-client text-center">
                         <img src="{{ asset('images/clients/cgiar.png') }}" alt="Logo">
                     </div>
-                    <!-- single client -->
                 </div>
                 <div class="col-lg-3">
                     <div class="single-client text-center">
                         <img src="{{ asset('images/clients/cimmyt.png') }}" alt="Logo">
                     </div>
-                    <!-- single client -->
                 </div>
                 <div class="col-lg-3">
                     <div class="single-client text-center">
                         <img src="{{ asset('images/clients/cip.jpg') }}" alt="Logo">
                     </div>
-                    <!-- single client -->
                 </div>
                 <div class="col-lg-3">
                     <div class="single-client text-center">
                         <img src="{{ asset('images/clients/icarda.png') }}" alt="Logo">
                     </div>
-                    <!-- single client -->
                 </div>
                 <div class="col-lg-3">
                     <div class="single-client text-center">
                         <img src="{{ asset('images/clients/icraf-world.jpg') }}" alt="Logo">
                     </div>
-                    <!-- single client -->
                 </div>
                 <div class="col-lg-3">
                     <div class="single-client text-center">
                         <img src="{{ asset('images/clients/icrisat.jpg') }}" alt="Logo">
                     </div>
-                    <!-- single client -->
                 </div>
                 <div class="col-lg-3">
                     <div class="single-client text-center">
                         <img src="{{ asset('images/clients/iita.jpg') }}" alt="Logo">
                     </div>
-                    <!-- single client -->
                 </div>
                 <div class="col-lg-3">
                     <div class="single-client text-center">
                         <img src="{{ asset('images/clients/ilri.jpg') }}" alt="Logo">
                     </div>
-                    <!-- single client -->
                 </div>
             </div>
-            <!-- row -->
         </div>
-        <!-- container -->
     </section>
     <!--====== CLIENT LOGO PART ENDS ======-->
 
-    <!--====== CONTACT TWO PART START ======-->
+    <!--====== CONTACT PART START ======-->
     <section id="contact" class="contact-area">
         <div class="container">
             <div class="row justify-content-center">
@@ -719,10 +545,8 @@
                         <hr style="border-top: 2px solid #800000;">
                         <p class="text">Want to know more about what we do, or our services?</p>
                     </div>
-                    <!-- section title -->
                 </div>
             </div>
-            <!-- row -->
             <div class="row">
                 <div class="col-lg-6">
                     <div class="contact-two mt-50 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
@@ -734,50 +558,53 @@
                             <a href="https://www.ilri.org/" target="_blank"><img src="{{ asset('images/clients/ilri5.png') }}"></a>
                         </div>
                     </div>
-                    <!-- contact two -->
                 </div>
                 <div class="col-lg-6">
                     <div class="contact-form form-style-one mt-35 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.5s">
-                        <form id="contact-form" action="assets/contact.php" method="post">
+                        <div class="row">
+                            <div class="col">
+                                @include('layouts.alerts')
+                            </div>
+                        </div>
+                        <form id="contact-form" action="{{ route('submitinquiry') }}" method="POST">
+                            {{csrf_field()}}
+
                             <div class="form-input mt-15">
                                 <label>Name</label>
                                 <div class="input-items default">
-                                    <input type="text" placeholder="Name" name="name">
+                                    <input type="text" placeholder="Name" name="name" required>
                                     <i class="lni-user"></i>
                                 </div>
                             </div>
-                            <!-- form input -->
+                            
                             <div class="form-input mt-15">
                                 <label>Email</label>
                                 <div class="input-items default">
-                                    <input type="email" placeholder="Email" name="email">
+                                    <input type="email" placeholder="Email" name="email" required>
                                     <i class="lni-envelope"></i>
                                 </div>
                             </div>
-                            <!-- form input -->
+                            
                             <div class="form-input mt-15">
                                 <label>Message</label>
                                 <div class="input-items default">
-                                    <textarea placeholder="Message" name="message"></textarea>
+                                    <textarea placeholder="Message" name="message" required></textarea>
                                     <i class="lni-pencil-alt"></i>
                                 </div>
                             </div>
-                            <!-- form input -->
+                            
                             <p class="form-message"></p>
                             <div class="form-input rounded-buttons mt-20">
                                 <button type="submit" class="main-btn rounded-three">Submit</button>
                             </div>
-                            <!-- form input -->
+
                         </form>
                     </div>
-                    <!-- contact form -->
                 </div>
             </div>
-            <!-- row -->
         </div>
-        <!-- container -->
     </section>
-    <!--====== CONTACT TWO PART ENDS ======-->
+    <!--====== CONTACT PART ENDS ======-->
 
     <!--====== FOOTER ======-->
     <footer id="footer" class="footer-area">
@@ -816,27 +643,22 @@
                             </div>
                             <div class="media-body dit-right">
                                 <h4>Phone Number</h4>
-                                <a href="#">+254 20 422 3384</a><br>
-                                <a href="#">+254 20 422 3384</a>
+                                <a href="#">+254 724 225 517</a><br>
+                                <a href="#">+254 724 225 517</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- row -->
             </div>
-            <!-- container -->
         </div>
-        <!-- footer widget -->
 
         <div class="footer-copyright">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-5">
                         <div class="copyright text-center text-lg-left mt-10">
-                            <p class="text">Crafted by <a style="color: #800000" target="_blank" rel="nofollow" href="https://maleonadam.netlify.app/">Adam</a> and UI Elements from <a style="color: #800000" target="_blank" rel="nofollow" href="https://ayroui.com">Ayro
-                                    UI</a></p>
+                            <p class="text">Crafted by <a style="color: #800000" target="_blank" rel="nofollow" href="https://maleonadam.netlify.app/">Adam</a>
                         </div>
-                        <!--  copyright -->
                     </div>
                     <div class="col-lg-2">
                     </div>
@@ -847,14 +669,10 @@
                             <li><a href="#"><i class="lni-instagram-original"></i></a></li>
                             <li><a href="#"><i class="lni-linkedin-original"></i></a></li>
                         </ul>
-                        <!-- social -->
                     </div>
                 </div>
-                <!-- row -->
             </div>
-            <!-- container -->
         </div>
-        <!-- footer copyright -->
     </footer>
     <!--====== FOOTER  ======-->
 
@@ -893,7 +711,7 @@
     <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
 
     <!--====== wow js ======-->
-    <script src="{{ asset('js/wow.min.js') }}"></script>
+    <!-- <script src="{{ asset('js/wow.min.js') }}"></script> -->
 
     <!--====== Main js ======-->
     <script src="{{ asset('js/main.js') }}"></script>

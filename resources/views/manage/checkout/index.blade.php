@@ -134,7 +134,7 @@
                                     <div class="form-group">
                                         <a href="{{ route('cart.index') }}" class="btn btn-warning mr-2"><i class="fa fa-angle-left"></i> Back to Cart</a>
 
-                                        <button type="submit" class="btn btn-success float-right"><i class="fa fa-lock"></i> Place My Order</button>
+                                        <button type="submit" class="btn btn-success float-right"><i class="fa fa-lock"></i> Place Order</button>
                                     </div>
                                 </form>
                             </div>
